@@ -1,7 +1,9 @@
 from . import views
 from django.contrib import admin
 from django.urls import path
-
+from .views import addtask
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    
+    path('addtask/',views.addtask,name='addtask')
+    
 ]
