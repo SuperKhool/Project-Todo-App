@@ -34,3 +34,7 @@ def edit_task(request,pk):
 
 
     
+def delete_task(request,pk):
+    delete_task=get_object_or_404(Task,pk=pk)
+    delete_task.delete()
+    return redirect('home')
